@@ -1,0 +1,170 @@
+/* GOOGLE FONT */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* VARIABLES */
+
+:root {
+  --bg-color: #050505;
+  --table-stripes: #343a40;
+  --secondary-color: #07aefe;
+  --header-color: #237adc;
+  --error-color: #cc211f;
+}
+
+/* ERROR MESSAGE */
+
+.error {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-size: 2.5em;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  color: var(--error-color);
+}
+
+/* TABLE */
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-color);
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+  width: 70vw;
+  font-family: "Lato", sans-serif;
+}
+
+th {
+  font-weight: 400;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 14px;
+}
+
+tr {
+  color: white;
+  font-weight: 100;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-stripes);
+}
+
+tr:hover {
+  background-color: var(--secondary-color);
+  transition: ease-in-out;
+  transition-duration: 300ms;
+  color: var(--bg-color);
+  font-weight: 400;
+}
+
+th {
+  background-color: var(--header-color);
+  color: white;
+}
+
+/* ul - overriding user agent style sheet */
+ul {
+  padding-inline-start: 0;
+}
+
+/* PAGINATION */
+
+.pagination {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  outline: none;
+}
+
+.pagination > .active > a {
+  border-color: var(--secondary-color);
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.pagination > li > a {
+  border: 1px solid var(--secondary-color);
+  padding: 5px 10px;
+  margin: 0 3px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.pagination > li > a:hover {
+  background-color: var(--header-color);
+  color: var(--bg-color);
+  border: none;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  color: var(--secondary-color);
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: 25px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1100px) {
+  table {
+    width: 90vw;
+    font-size: 0.9em;
+  }
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  table {
+    width: 95vw;
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 1em;
+  }
+  .img-container {
+    padding: 7px 0;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .img-container {
+    padding: 0;
+    margin-bottom: 14px;
+  }
+  h1 {
+    font-size: 0.6em;
+  }
+  table {
+    font-size: 0.5em;
+  }
+  th,
+  td {
+    padding: 6px;
+  }
+}
